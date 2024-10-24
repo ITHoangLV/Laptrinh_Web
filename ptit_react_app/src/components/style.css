@@ -1,0 +1,167 @@
+@import 'font-awesome/css/font-awesome.css';
+
+
+
+.todo-list {
+    max-width: 400px;
+    margin: 20px auto; /* Thêm khoảng cách phía trên */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng cho khung */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.todo-list:hover {
+    transform: translateY(-2px); /* Di chuyển nhẹ khi hover */
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Màu nền cho khu vực nhập liệu */
+    transition: border-color 0.2s; /* Hiệu ứng chuyển màu viền */
+}
+
+.add-task:focus-within {
+    border-color: white; /* Đổi màu viền khi nhập liệu */
+}
+
+.add-task-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: orange;
+    font-size: 24px;
+}
+
+.add-task-icon i {
+    margin-right: 5px;
+}
+
+.add-task-icon:hover {
+    opacity: 0.8;
+}
+
+.add-task input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.2s; /* Hiệu ứng màu nền */
+}
+
+.add-task input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.add-task input:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover vào input */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.2s; /* Hiệu ứng màu nền */
+}
+
+.task:hover {
+    background-color: #f9f9f9; /* Màu nền khi hover vào nhiệm vụ */
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.task-text {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.2s; /* Hiệu ứng màu chữ */
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-date {
+    font-size: 12px;
+    color: gray;
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: border-color 0.2s; /* Hiệu ứng màu viền */
+}
+
+.custom-checkbox:checked {
+    background-color: #00ff11;
+    border: 2px solid #00ff3c;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: relative;
+    top: 2px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: color 0.2s; /* Hiệu ứng màu chữ */
+}
+
+.delete-button:hover {
+    color: darkred;
+}
+
+/* Màu sắc tùy chỉnh cho các nhiệm vụ */
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.gray {
+    color: gray;
+}
